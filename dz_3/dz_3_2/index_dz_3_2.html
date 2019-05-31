@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dz_3_2</title>
+</head>
+
+<body>
+    <script>
+        let classroom = {
+            lamp: (lamps) => {
+                let a;
+                if (lamps === true) {
+                    a = 'the light is on';
+                    return a;
+                } else {
+                    a = 'the light is off';
+                }
+            },
+            conditioner: 1,
+            atmosphere: 'low',
+            temperature: 'hell',
+            board: 1,
+            wall: 4,
+            panic: 'acceptable',
+            mouse: function(noice) {
+                let mouse;
+                if (noice === true) {
+                    mouse = 'sits quietly';
+                } else {
+                    mouse = 'rustles';
+                }
+                return mouse;
+            },
+            camera: 1,
+            sockets: new Object(), //объект в объекте литеральной нотацией
+            sockets: {
+                powerOutlet: 20
+            }
+
+        };
+        classroom.people = {
+            teacher: 1,
+            cadets: {
+                value: 13,
+                doSomething: () => {
+                    console.log('make a smart look');
+                }
+            } //=)
+        };
+        classroom.furniture = {
+            table: 15,
+            stool: 15
+        };
+        classroom.computerWork = () => {
+            let comp = 'work buzz,buzz.';
+            console.log('computer ' + comp);
+        }
+        classroom.conditionerWork = function() {
+            console.log('cools violently');
+        };
+
+        function camer() {
+            console.log('is shooting')
+        }
+
+        classroom.camera = camer; //присвоение свойству обьекта функции обьявленной отдельно
+
+
+        classroom.computerWork();
+        console.log(classroom.lamp(true));
+        classroom.conditionerWork();
+        classroom.people.cadets.doSomething();
+        console.log('mouse ' + classroom.mouse(false));
+        console.log('camera ' + classroom.camera);
+        console.log('sockets=' + classroom.sockets.powerOutlet);
+    </script>
+</body>
+
+</html>
