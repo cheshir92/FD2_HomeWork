@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Claassroom() {
+            this.conditioner = 1;
+            this.atmosphere = 'low';
+            this.temperature = 'hell';
+            this.board = 1;
+            this.wall = 4;
+            this.panic = 'acceptable';
+            this.camera = 1;
+            this.people = new People();
+            this.cadets = new Cadets();
+            this.furniture = new Furniture();
+            this.insects = new Insects();
+            this.nail = new Nails();
+        }
+        let klass = new Claassroom();
+
+        function People() {
+            this.teacher = 1;
+
+        }
+
+        function Cadets() {
+            this.value = 13;
+        }
+
+        function Furniture() {
+            this.table = 15;
+            this.stool = 15;
+        };
+
+        function Insects() {
+            this.flies = 123;
+            this.spiders = 1;
+            this.beetle = 200;
+        }
+
+        function Nails() {
+            this.nails = 400;
+        }
+        console.log(klass);
+    </script>
+
+</body>
+
+</html>
