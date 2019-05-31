@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: var(--testColor);
+        }
+        
+        .red {
+            background-color: red;
+        }
+        
+        .blue {
+            background-color: blue;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        .black {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body class="color1">
+    <br> №1
+    <!--dz_1-->
+    <input type="text">
+    <button onclick="myfunk()">Click</button>
+    <br>№2
+    <!--dz_2-->
+    <select> 
+            <option>red</option>
+            <option>blue</option>
+            <option>green</option>
+            <option>black</option>
+    </select>
+    <button onclick="colorChange()">Click</button>
+    <br>№3
+    <!--dz_3-->
+    <select> 
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="black">black</option>
+    </select>
+    <button onclick="myfun()">Click</button>
+    <br>№4
+    <!--dz_4-->
+    <input type="color">
+    <button onclick="myFunDz4()">Click</button>
+    <br>№5
+    <!--dz_5-->
+    <select onchange="myFunDz5(this);">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="black">black</option>
+        </select>
+
+
+
+
+
+    <script>
+        function myfunk() { //dz_1
+            cleanColor()
+            let color1 = document.getElementsByTagName('input')[0].value;
+            document.body.style.backgroundColor = color1;
+        }
+
+        function colorChange() { //dz_2
+            cleanColor()
+            let colorNum = document.getElementsByTagName('select')[0].value;
+            document.body.style.backgroundColor = colorNum;
+        }
+
+        function myfun() { //dz_3
+            cleanColor()
+            a = document.getElementsByTagName('select')[1].value;
+            document.body.className = a;
+
+        }
+
+        function myFunDz4() { //dz_4
+            cleanColor()
+            a = document.getElementsByTagName('input')[1].value;
+            document.body.style.setProperty('--testColor', a);
+        }
+
+        function myFunDz5(a) { //dz_5
+            cleanColor()
+            document.body.style.setProperty('--testColor', a.value);
+        }
+
+        function cleanColor() {
+            document.body.style.backgroundColor = '';
+            document.body.className = '';
+        }
+    </script>
+
+</body>
